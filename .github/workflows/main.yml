@@ -21,7 +21,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /var/www/html/
-          sudo cp -f /var/www/html/index.html /var/www/html/index.html.bak
           sudo rm -f /var/www/html/index.html  
           sudo cp -f index.html /var/www/html/  
 
