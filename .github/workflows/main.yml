@@ -20,8 +20,8 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          sudo cp -f /var/www/html/index.html /var/www/html/index.html.bak  # Backup the existing HTML file
-          sudo cp -f index.html /var/www/html/index.html  # Assuming your HTML file is in the root of the repository
+          sudo cp -f /var/www/html/index.html /var/www/html/index.html.bak 
+          sudo cp -f index.html /var/www/html/
           
   
-          sudo service apache2 restart || sudo service httpd restart || true
+          sudo service httpd restart
