@@ -21,6 +21,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           sudo cp -f /var/www/html/index.html /var/www/html/index.html.bak  # Backup the existing HTML file
-          sudo cp -f index.html /var/www/html/index.html  # Replace with your actual path
-          sudo service apache2 restart  # Adjust this line based on your web server (e.g., apache2 for Apache)
-
+          sudo cp -f index.html /var/www/html/  # Assuming your HTML file is in the root of the repository
+          
+          # Adjust the service restart command based on your web server (e.g., apache2, httpd)
+          sudo service apache2 restart || sudo service httpd restart || true
