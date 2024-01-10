@@ -25,4 +25,4 @@ jobs:
            
 
   
-          sudo systemctl httpd restart
+          sudo systemctl restart httpd
