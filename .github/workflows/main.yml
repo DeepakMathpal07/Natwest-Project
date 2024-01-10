@@ -20,8 +20,9 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
+          cd /var/www/html/
           sudo cp -f /var/www/html/index.html /var/www/html/index.html.bak 
-          sudo cp -f index1.html /var/www/html/
+          sudo cp -f index.html /var/www/html/
           
   
           sudo service httpd restart
