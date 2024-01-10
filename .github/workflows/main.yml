@@ -17,7 +17,7 @@ jobs:
       uses: appleboy/ssh-action@master
 
     - name: Copy index.html to EC2
-      run: scp -i ${{ secrets.SSH_PRIVATE_KEY }} ${{ github.workspace }}/index.html ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/var/www/html/
+      run: scp -i ${{ secrets.SSH_PRIVATE_KEY }} ${{ github.workspace }}/index.html ec2-user@3.85.5.19:/var/www/html/
 
     - name: SSH into EC2 and restart Apache
       uses: appleboy/ssh-action@master
