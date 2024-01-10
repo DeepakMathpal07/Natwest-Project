@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           sudo mv -f /var/www/html/index.html /var/www/html/index.html.bak
-          sudo cp -f /var/www/html/index.html /var/www/html/  # Adjust the path to the correct location
+          sudo cp -f ${{ github.workspace }}/index.html /var/www/html/
            
 
   
