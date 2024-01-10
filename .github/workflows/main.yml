@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /path/to/your/web/server
-          git pull origin main
-          sudo service httpd restart  # Adjust this line based on your web server (e.g., nginx)
+          sudo cp -f /var/www/html/index.html /var/www/html/index.html.bak  # Backup the existing HTML file
+          sudo cp -f index.html /var/www/html/index.html  # Replace with your actual path
+          sudo service apache2 restart  # Adjust this line based on your web server (e.g., apache2 for Apache)
 
