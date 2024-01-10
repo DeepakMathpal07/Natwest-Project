@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           sudo mv -f /var/www/html/index.html /var/www/html/index.html.bak
-          sudo cp -f Natwest-Project/index.html /var/www/html/
+          sudo cp -f index.html /var/www/html/
            
 
   
