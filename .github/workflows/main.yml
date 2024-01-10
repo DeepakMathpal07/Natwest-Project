@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           sudo mv -f /var/www/html/index.html /var/www/html/index.html.bak
-          sudo cp -f ${{ github.workspace }}/Natwest-Project/index.html /var/www/html/
+          sudo cp -f ${{ github.workspace }}/index.html /var/www/html/
 
            
 
